@@ -1,0 +1,23 @@
+baseURL: https://onyukito.github.io/
+languageCode: en-us
+title: On Notes
+theme: ["PaperMod"]
+
+hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
+permalinks:
+  post: "/:title/"
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - $$
+            - $$
+          inline:
+          - - $
+            - $            
+        enable: true
+params:
+  math: true
+  hideSummary: true
